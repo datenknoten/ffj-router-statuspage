@@ -1,7 +1,7 @@
 function doRequest($scope,$interval,$http) {
      $http({
         method: 'GET',
-        url: '/158.gz',
+        url: '158.gz',
         responseType: "arraybuffer"
     }).then(function successCallback(response) {
         var input = response.data;
@@ -32,7 +32,7 @@ function doRequest($scope,$interval,$http) {
     });
     $http({
         method: 'GET',
-        url: '/159.gz',
+        url: '159.gz',
         responseType: "arraybuffer"
     }).then(function successCallback(response) {
         var input = response.data;

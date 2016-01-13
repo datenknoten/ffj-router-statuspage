@@ -1,0 +1,26 @@
+{
+  "name": "ff-router-statuspage",
+  "authors": [
+    "Tim Schumacher <tim@datenknoten.me>"
+  ],
+  "description": "",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "semantic": "semantic-ui#~2.1.8",
+    "angular": "~1.4.8",
+    "zlib.js": "~0.2.0",
+    "angular-chart.js": "~0.8.8",
+    "angular-leaflet-directive": "~0.10.0"
+  }
+}

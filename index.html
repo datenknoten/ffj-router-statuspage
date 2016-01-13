@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    
+    <link rel="stylesheet" href="/bower_components/semantic/dist/semantic.css">
+    <link rel="stylesheet" href="/bower_components/angular-chart.js/dist/angular-chart.css">
+    <link rel="stylesheet" href="/bower_components/leaflet/dist/leaflet.css">
+    <link rel="stylesheet" href="/css/basics.css">
+  </head>
+  <body ng-app="RouterApp">
+    <main class="ui main container" ng-controller="RouterController">
+      <div class="ui inverted green segment">
+        <h1 class="ui header">Router „{{ hostname }}“</h1>
+      </div>
+
+      <h2 class="ui inverted top attached green segment header">Allgemein</h2>
+      <div class="ui attached segment">
+        <div class="ui relaxed divided list">
+
+          <div class="item">
+            <i class="big home middle aligned icon"></i>
+            <div class="content">
+              <a class="header">Node ID</a>
+              <div class="description">{{ nodeid }}</div>
+            </div>
+          </div>
+
+          <div class="item">
+            <i class="big history middle aligned icon"></i>
+            <div class="content">
+              <a class="header">Uptime</a>
+              <div class="description">{{ uptime }}</div>
+            </div>
+          </div>
+
+          <div class="item">
+            <i class="big map middle aligned icon"></i>
+            <div class="content" style="width: 100%">
+              <a class="header">Ort</a>
+              <div class="description">
+                <leaflet center="location" markers="markers" width="100%" height="480px"></leaflet>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <h2 class="ui inverted top attached green segment header">Speicher</h2>
+      <div class="ui attached segment">
+        <canvas
+           class="chart chart-radar"
+           chart-data="memory_data"
+           chart-legend="true"
+           chart-options="chart_options"
+           chart-labels="memory_labels"
+           chart-series="memory_series">
+        </canvas>
+      </div>
+
+      <!-- <h2 class="ui inverted top attached green segment header">Prozesse</h2> -->
+      <!-- <div class="ui attached segment"> -->
+
+      <!-- </div> -->
+    </main>
+    <script src="/bower_components/jquery/dist/jquery.js" ></script>
+    <script src="/bower_components/semantic/dist/semantic.js" ></script>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/zlib.js/bin/zlib_and_gzip.min.js"></script>
+    <script src="/bower_components/Chart.js/Chart.js"></script>
+    <script src="/bower_components/angular-chart.js/dist/angular-chart.js"></script>
+    <script src="/bower_components/leaflet/dist/leaflet.js"></script>
+    <script src="/bower_components/angular-leaflet-directive/dist/angular-leaflet-directive.js"></script>
+    <script src="/js/controller.js"></script>
+  </body>
+</html>    

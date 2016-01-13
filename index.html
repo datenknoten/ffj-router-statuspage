@@ -37,7 +37,7 @@
             <i class="big history middle aligned icon"></i>
             <div class="content">
               <a class="header">Uptime</a>
-              <div class="description">{{ uptime }}</div>
+              <div class="description">{{ uptime | amDurationFormat : 'seconds' }}</div>
             </div>
           </div>
 
@@ -79,6 +79,8 @@
     <script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
     <script src="bower_components/leaflet/dist/leaflet.js"></script>
     <script src="bower_components/angular-leaflet-directive/dist/angular-leaflet-directive.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/angular-moment/angular-moment.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>    

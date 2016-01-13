@@ -84,6 +84,6 @@ function RouterController($scope,$interval,$http) {
 
 (function (angular) {
     'use strict';
-    angular.module('RouterApp',['chart.js','leaflet-directive'])
+    angular.module('RouterApp',['chart.js','leaflet-directive','angularMoment'])
         .controller('RouterController',['$scope','$interval','$http',RouterController]);
 })(window.angular);

@@ -5,7 +5,7 @@ function doRequest($scope,$interval,$http) {
         responseType: "arraybuffer"
     }).then(function successCallback(response) {
         var input = response.data;
-        input = Uint8Array(input);
+        input = new Uint8Array(input);
         var gunzip = new Zlib.Gunzip(input);
         var plain = gunzip.decompress();
         plain = JSON.parse(String.fromCharCode.apply(null, plain));
@@ -36,7 +36,7 @@ function doRequest($scope,$interval,$http) {
         responseType: "arraybuffer"
     }).then(function successCallback(response) {
         var input = response.data;
-        input = Uint8Array(input);
+        input = new Uint8Array(input);
         var gunzip = new Zlib.Gunzip(input);
         var plain = gunzip.decompress();
         plain = JSON.parse(String.fromCharCode.apply(null, plain));

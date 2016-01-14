@@ -2,3 +2,7 @@ body {
   background-color: #f0f3f4;
   padding: 3em;
 }
+
+.ui.inverted.segment {
+  border-width: 0 !important;
+}

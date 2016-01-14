@@ -26,7 +26,8 @@ var css_files = [
     "./bower_components/semantic/dist/components/segment.css",
     "./bower_components/angular-chart.js/dist/angular-chart.css",
     "./bower_components/leaflet/dist/leaflet.css",
-    "./css/basics.css"
+    "./css/basics.css",
+    "./css/colors.css"
 ];
 
 gulp.task('scripts', function() {
